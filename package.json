@@ -41,5 +41,6 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
     "eslint-plugin-storybook": "^0.6.10"
-  }
+  },
+  "packageManager": "yarn@3.4.1"
 }
