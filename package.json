@@ -13,24 +13,24 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/server": "^11.10.0",
-    "@mantine/carousel": "^5.10.4",
-    "@mantine/core": "^5.10.4",
-    "@mantine/hooks": "^5.10.4",
-    "@mantine/next": "^5.10.4",
-    "@next/font": "13.1.6",
-    "@types/node": "18.14.0",
+    "@mantine/carousel": "^5.10.5",
+    "@mantine/core": "^5.10.5",
+    "@mantine/hooks": "^5.10.5",
+    "@mantine/next": "^5.10.5",
+    "@next/font": "13.2.3",
+    "@types/node": "18.14.6",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "embla-carousel-react": "^7.0.9",
-    "eslint": "8.34.0",
-    "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.21.0",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -39,8 +39,8 @@
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
-    "babel-loader": "^8.3.0",
-    "eslint-plugin-storybook": "^0.6.10"
+    "babel-loader": "^9.1.2",
+    "eslint-plugin-storybook": "^0.6.11"
   },
   "resolutions": {
     "@storybook/react-docgen-typescript-plugin": "npm:react-docgen-typescript-plugin@1.0.2"
