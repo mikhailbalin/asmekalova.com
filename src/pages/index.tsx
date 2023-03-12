@@ -1,3 +1,4 @@
+import { Layout } from "@components/components";
 import {
   Hero,
   About,
@@ -10,7 +11,7 @@ import {
 
 export default function Home() {
   return (
-    <>
+    <Layout>
       <Hero />
       <About />
       <Experience />
@@ -18,6 +19,6 @@ export default function Home() {
       <Process />
       <Testimonials />
       <Contacts />
-    </>
+    </Layout>
   );
 }
