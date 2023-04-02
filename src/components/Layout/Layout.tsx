@@ -9,7 +9,14 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   return (
     <>
-      <Header links={[{ label: "Label", link: "/", links: [] }]} />
+      <Header
+        links={[
+          { label: "Home", link: "/" },
+          { label: "About me", link: "/" },
+          { label: "Services", link: "/" },
+          { label: "Journal", link: "/" },
+        ]}
+      />
       {children}
       <Footer
         data={[

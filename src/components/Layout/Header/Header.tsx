@@ -7,6 +7,7 @@ import {
   Button,
   Burger,
   rem,
+  Drawer,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
@@ -18,13 +19,14 @@ interface HeaderActionProps {
   links: {
     link: string;
     label: string;
-    links: { link: string; label: string }[];
+    links?: { link: string; label: string }[];
   }[];
 }
 
 export function HeaderAction({ links }: HeaderActionProps) {
   const { classes } = useStyles();
   const [opened, { toggle }] = useDisclosure(false);
+
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
       <Menu.Item key={item.link}>{item.label}</Menu.Item>
@@ -50,6 +52,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
               </Center>
             </a>
           </Menu.Target>
+
           <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
       );
@@ -69,22 +72,20 @@ export function HeaderAction({ links }: HeaderActionProps) {
 
   return (
     <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }}>
+      <Drawer opened={opened} onClose={toggle} position="top">
+        {items}
+      </Drawer>
+
       <Container className={classes.inner} fluid>
-        <Group>
+        <Group position="apart">
+          <Button className={classes.button}>Book a call</Button>
           <Burger
             opened={opened}
             onClick={toggle}
             className={classes.burger}
             size="sm"
           />
-          Logo{/* <MantineLogo size={28} /> */}
         </Group>
-        <Group spacing={5} className={classes.links}>
-          {items}
-        </Group>
-        <Button radius="xl" h={30}>
-          Get early access
-        </Button>
       </Container>
     </Header>
   );

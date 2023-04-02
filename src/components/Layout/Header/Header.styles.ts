@@ -4,14 +4,12 @@ import { createStyles, rem } from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
   inner: {
     height: HEADER_HEIGHT,
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
   },
 
   links: {
-    [theme.fn.smallerThan("sm")]: {
-      display: "none",
+    display: "none",
+    [theme.fn.largerThan("sm")]: {
+      display: "block",
     },
   },
 
@@ -45,4 +43,6 @@ export const useStyles = createStyles((theme) => ({
   linkLabel: {
     marginRight: rem(5),
   },
+
+  button: {},
 }));
