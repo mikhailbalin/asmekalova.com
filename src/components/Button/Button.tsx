@@ -1,7 +1,7 @@
-import { Group, Button, rem } from "@mantine/core";
+import { Group, Button as MantineButton, rem } from "@mantine/core";
 
-export const CallToActionButton = () => (
-  <Button
+export const Button = () => (
+  <MantineButton
     component="a"
     target="_blank"
     rel="noopener noreferrer"
@@ -24,5 +24,5 @@ export const CallToActionButton = () => (
     })}
   >
     Book a Call
-  </Button>
+  </MantineButton>
 );

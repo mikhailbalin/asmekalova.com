@@ -4,7 +4,6 @@ import {
   Header,
   Container,
   Group,
-  Button,
   Burger,
   rem,
   Drawer,
@@ -12,7 +11,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import { useStyles } from "./Header.styles";
-import { CallToActionButton } from "@components/components/CallToActionButton";
+import { Button } from "@components/components/Button";
 
 const HEADER_HEIGHT = rem(60);
 
@@ -79,7 +78,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
 
       <Container className={classes.container} fluid>
         <Group className={classes.group} position="apart">
-          <CallToActionButton />
+          <Button />
           <Burger
             opened={opened}
             onClick={toggle}
