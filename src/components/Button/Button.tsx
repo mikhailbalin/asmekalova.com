@@ -1,4 +1,4 @@
-import { Group, Button as MantineButton, rem } from "@mantine/core";
+import { Button as MantineButton, rem } from "@mantine/core";
 
 export const Button = () => (
   <MantineButton
