@@ -2,8 +2,15 @@ import { HEADER_HEIGHT } from "@components/constants";
 import { createStyles, rem } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
-  inner: {
+  container: {
     height: HEADER_HEIGHT,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+
+  group: {
+    width: "100%",
   },
 
   links: {
@@ -43,6 +50,4 @@ export const useStyles = createStyles((theme) => ({
   linkLabel: {
     marginRight: rem(5),
   },
-
-  button: {},
 }));
