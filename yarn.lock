@@ -2413,13 +2413,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/font@npm:^13.3.0":
-  version: 13.3.0
-  resolution: "@next/font@npm:13.3.0"
-  checksum: 8b3ffee19a30e98050ae06bbf96655cce29b62de014f96d38512f914ec86a1f8319bdbdb5408f26e359d69b351585ac87002aa9faee6fe19ec1d06dd6bae5eae
-  languageName: node
-  linkType: hard
-
 "@next/swc-darwin-arm64@npm:13.3.0":
   version: 13.3.0
   resolution: "@next/swc-darwin-arm64@npm:13.3.0"
@@ -5425,7 +5418,6 @@ __metadata:
     "@mantine/core": ^6.0.6
     "@mantine/hooks": ^6.0.6
     "@mantine/next": ^6.0.6
-    "@next/font": ^13.3.0
     "@storybook/addon-actions": ^6.5.16
     "@storybook/addon-essentials": ^6.5.16
     "@storybook/addon-interactions": ^6.5.16
