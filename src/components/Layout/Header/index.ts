@@ -1,1 +1,1 @@
-export { HeaderAction as Header } from "./Header";
+export { Header } from "./Header";

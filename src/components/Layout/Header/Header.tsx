@@ -1,21 +1,10 @@
-import {
-  Menu,
-  Center,
-  Header,
-  Container,
-  Group,
-  Burger,
-  rem,
-  Drawer,
-} from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { IconChevronDown } from "@tabler/icons-react";
-import { useStyles } from "./Header.styles";
-import { Button } from "@components/components/Button";
+import { Header as MantineHeader } from "@mantine/core";
+import { useWindowScroll } from "@mantine/hooks";
+import React from "react";
+import { HeaderContent } from "./HeaderContent/HeaderContent";
+import { HEADER_HEIGHT } from "@components/constants";
 
-const HEADER_HEIGHT = rem(60);
-
-interface HeaderActionProps {
+interface HeaderProps {
   links: {
     link: string;
     label: string;
@@ -23,70 +12,20 @@ interface HeaderActionProps {
   }[];
 }
 
-export function HeaderAction({ links }: HeaderActionProps) {
-  const { classes } = useStyles();
-  const [opened, { toggle }] = useDisclosure(false);
+export const Header = ({ links }: HeaderProps) => {
+  const [scroll] = useWindowScroll();
 
-  const items = links.map((link) => {
-    const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
-    ));
-
-    if (menuItems) {
-      return (
-        <Menu
-          key={link.label}
-          trigger="hover"
-          transitionProps={{ exitDuration: 0 }}
-          withinPortal
-        >
-          <Menu.Target>
-            <a
-              href={link.link}
-              className={classes.link}
-              onClick={(event) => event.preventDefault()}
-            >
-              <Center>
-                <span className={classes.linkLabel}>{link.label}</span>
-                <IconChevronDown size={rem(12)} stroke={1.5} />
-              </Center>
-            </a>
-          </Menu.Target>
-
-          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
-        </Menu>
-      );
-    }
-
-    return (
-      <a
-        key={link.label}
-        href={link.link}
-        className={classes.link}
-        onClick={(event) => event.preventDefault()}
-      >
-        {link.label}
-      </a>
-    );
-  });
+  const headerHeight = Math.max(50, 60 - scroll.y * 0.05);
+  const backgroundColor = `rgba(255, 255, 255, ${Math.min(1, scroll.y / 200)})`;
 
   return (
-    <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }}>
-      <Drawer opened={opened} onClose={toggle} position="top">
-        {items}
-      </Drawer>
-
-      <Container className={classes.container} fluid>
-        <Group className={classes.group} position="apart">
-          <Button />
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            className={classes.burger}
-            size="sm"
-          />
-        </Group>
-      </Container>
-    </Header>
+    <MantineHeader
+      height={HEADER_HEIGHT}
+      style={{ height: headerHeight, backgroundColor, transition: "all 0.3s" }}
+      sx={{ borderBottom: 0 }}
+      fixed
+    >
+      <HeaderContent links={links} />
+    </MantineHeader>
   );
-}
+};
