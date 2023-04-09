@@ -10,8 +10,9 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import { useStyles } from "./HeaderContent.styles";
-import { Button } from "@components/components/Button";
+// import { Button } from "@components/components/Button";
 import React from "react";
+import { Button } from "@components/components/Button";
 
 interface HeaderContentProps {
   links: {
@@ -76,7 +77,7 @@ export const HeaderContent = React.memo(({ links }: HeaderContentProps) => {
 
       <Container className={classes.container} fluid>
         <Group className={classes.group} position="apart">
-          <Button />
+          <Button>Book a Call</Button>
           <Burger
             opened={opened}
             onClick={toggle}
