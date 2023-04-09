@@ -39,10 +39,6 @@ export const useStyles = createStyles((theme) => ({
     },
   },
 
-  highlight: {
-    color: theme.colors[theme.primaryColor][4],
-  },
-
   description: {
     color: theme.colors.gray[0],
     textAlign: "center",

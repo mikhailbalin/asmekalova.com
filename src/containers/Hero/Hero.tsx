@@ -9,12 +9,7 @@ export function Hero() {
       {/* <Overlay color="#000" opacity={0.65} zIndex={1} /> */}
 
       <div className={classes.inner}>
-        <Title className={classes.title}>
-          Anastasiia{" "}
-          <Text component="span" inherit className={classes.highlight}>
-            Smekalova
-          </Text>
-        </Title>
+        <Title className={classes.title}>Anastasiia Smekalova</Title>
 
         <Container size={640}>
           <Text className={classes.description} mb={90}>
