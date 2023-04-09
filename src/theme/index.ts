@@ -32,4 +32,5 @@ export const theme: MantineThemeOverride = {
       gray2: "#e1e1e1",
     },
   },
+  components: {},
 };
