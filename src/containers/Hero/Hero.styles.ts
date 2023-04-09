@@ -6,7 +6,7 @@ export const useStyles = createStyles((theme) => ({
     position: "relative",
     paddingTop: rem(180),
     paddingBottom: rem(130),
-    backgroundImage: `url(${image.src})`,
+    // backgroundImage: `url(${image.src})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh",
@@ -83,10 +83,10 @@ export const useStyles = createStyles((theme) => ({
 
   secondaryControl: {
     color: theme.white,
-    backgroundColor: "rgba(255, 255, 255, .4)",
+    // backgroundColor: "rgba(255, 255, 255, .4)",
 
-    "&:hover": {
-      backgroundColor: "rgba(255, 255, 255, .45) !important",
-    },
+    // "&:hover": {
+    //   backgroundColor: "rgba(255, 255, 255, .45) !important",
+    // },
   },
 }));

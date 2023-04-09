@@ -10,7 +10,13 @@ const manrope = Manrope({
 
 declare module "@mantine/core" {
   export interface MantineThemeOther {
-    colors: {};
+    colors: {
+      brand1: "#f2e9e9";
+      brand2: "#dfd2cd";
+      brand3: "#dfeaee";
+      gray1: "#737373";
+      gray2: "#e1e1e1";
+    };
   }
 }
 
@@ -20,7 +26,13 @@ export const theme: MantineThemeOverride = {
     fontFamily: manrope.style.fontFamily,
   },
   other: {
-    colors: {},
+    colors: {
+      brand1: "#f2e9e9",
+      brand2: "#dfd2cd",
+      brand3: "#dfeaee",
+      gray1: "#737373",
+      gray2: "#e1e1e1",
+    },
   },
   components,
   breakpoints,
