@@ -5,6 +5,7 @@ import React from "react";
 import { Button } from "@components/components/Button";
 import { Burger } from "@components/components/Burger";
 import { useStyles } from "./HeaderContent.styles";
+import { HeaderLink } from "./HeaderLink";
 
 interface HeaderContentProps {
   links: {
@@ -32,16 +33,12 @@ export const HeaderContent = React.memo(({ links }: HeaderContentProps) => {
           withinPortal
         >
           <Menu.Target>
-            <a
-              href={link.link}
-              className={classes.link}
-              onClick={(event) => event.preventDefault()}
-            >
+            <HeaderLink link={link.link}>
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
                 <IconChevronDown size={rem(12)} stroke={1.5} />
               </Center>
-            </a>
+            </HeaderLink>
           </Menu.Target>
 
           <Menu.Dropdown>{menuItems}</Menu.Dropdown>
@@ -50,20 +47,24 @@ export const HeaderContent = React.memo(({ links }: HeaderContentProps) => {
     }
 
     return (
-      <a
-        key={link.label}
-        href={link.link}
-        className={classes.link}
-        onClick={(event) => event.preventDefault()}
-      >
+      <HeaderLink key={link.label} link={link.link}>
         {link.label}
-      </a>
+      </HeaderLink>
     );
   });
 
   return (
     <>
-      <Drawer opened={opened} onClose={toggle} position="top">
+      <Drawer
+        opened={opened}
+        onClose={toggle}
+        position="top"
+        lockScroll={false}
+        withCloseButton={false}
+        classNames={{
+          body: classes.drawerBody,
+        }}
+      >
         {items}
       </Drawer>
 

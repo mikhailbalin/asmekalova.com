@@ -1,4 +1,3 @@
-import { ButtonStylesParams, rem } from "@mantine/core";
 import { MantineThemeOverride } from "@mantine/styles";
 import { Manrope } from "next/font/google";
 
@@ -33,23 +32,5 @@ export const theme: MantineThemeOverride = {
       gray2: "#e1e1e1",
     },
   },
-  components: {
-    // Button: {
-    //   styles: (theme, params: ButtonStylesParams, { variant }) => ({
-    //     root: {
-    //       border: `1px solid ${theme.black}`,
-    //       borderRadius: "50%",
-    //       color: theme.black,
-    //       fontSize: rem(13),
-    //       backgroundColor: "transparent",
-    //       transform: "rotateZ(2.5deg)",
-    //       transition: "transform 0.2s ease-in-out",
-    //       "&:hover": {
-    //         backgroundColor: theme.white,
-    //         transform: "rotateZ(0deg)",
-    //       },
-    //     },
-    //   }),
-    // },
-  },
+  components: {},
 };
