@@ -75,10 +75,10 @@ export function Process() {
 
   return (
     <div className={classes.wrapper}>
-      <Grid gutter={80}>
+      <Grid>
         <Col span={12} md={5}>
           <Title className={classes.title} order={2}>
-            A fully featured React components library for your next project
+            Process
           </Title>
           <Text c="dimmed">
             Build fully functional accessible web applications faster than ever
@@ -97,14 +97,19 @@ export function Process() {
           </Button>
         </Col>
         <Col span={12} md={7}>
-          {/* <SimpleGrid
+          <SimpleGrid
             cols={2}
             spacing={30}
             breakpoints={[{ maxWidth: "md", cols: 1 }]}
           >
             {items}
-          </SimpleGrid> */}
-          <Timeline active={1} bulletSize={24} lineWidth={2}>
+          </SimpleGrid>
+          <Timeline
+            active={1}
+            bulletSize={24}
+            lineWidth={2}
+            sx={{ marginTop: rem(60) }}
+          >
             <Timeline.Item
               bullet={<IconGitBranch size={12} />}
               title="New branch"

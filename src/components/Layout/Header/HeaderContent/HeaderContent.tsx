@@ -1,18 +1,10 @@
-import {
-  Menu,
-  Center,
-  Container,
-  Group,
-  Burger,
-  rem,
-  Drawer,
-} from "@mantine/core";
+import { Menu, Center, Container, Group, rem, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
-import { useStyles } from "./HeaderContent.styles";
-// import { Button } from "@components/components/Button";
 import React from "react";
 import { Button } from "@components/components/Button";
+import { Burger } from "@components/components/Burger";
+import { useStyles } from "./HeaderContent.styles";
 
 interface HeaderContentProps {
   links: {
@@ -75,15 +67,10 @@ export const HeaderContent = React.memo(({ links }: HeaderContentProps) => {
         {items}
       </Drawer>
 
-      <Container className={classes.container} fluid>
+      <Container className={classes.container} fluid id="Container">
         <Group className={classes.group} position="apart">
           <Button>Book a Call</Button>
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            className={classes.burger}
-            size="sm"
-          />
+          <Burger opened={opened} onClick={toggle} />
         </Group>
       </Container>
     </>

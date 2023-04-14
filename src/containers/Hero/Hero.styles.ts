@@ -23,7 +23,7 @@ export const useStyles = createStyles((theme) => ({
   // },
 
   title: {
-    fontSize: rem(40),
+    fontSize: rem(35),
     marginBottom: "2.8vw",
     fontWeight: 200,
     lineHeight: 1.2,
