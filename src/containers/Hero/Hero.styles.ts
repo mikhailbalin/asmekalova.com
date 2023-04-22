@@ -3,18 +3,17 @@ import image from "./3X5A5956-1.jpg";
 
 export const useStyles = createStyles((theme) => ({
   wrapper: {
-    position: "relative",
-    paddingTop: rem(180),
-    paddingBottom: rem(130),
+    // position: "relative",
+    // paddingTop: rem(180),
+    // paddingBottom: rem(130),
     // backgroundImage: `url(${image.src})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
+    // backgroundSize: "cover",
+    // backgroundPosition: "center",
     // height: "80vh",
-
-    [theme.fn.smallerThan("xs")]: {
-      paddingTop: rem(80),
-      paddingBottom: rem(50),
-    },
+    // [theme.fn.smallerThan("xs")]: {
+    //   paddingTop: rem(80),
+    //   paddingBottom: rem(50),
+    // },
   },
 
   // inner: {

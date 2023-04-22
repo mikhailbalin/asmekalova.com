@@ -2,7 +2,6 @@ import { createStyles, rem } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
   wrapper: {
-    padding: `calc(${theme.spacing.xl} * 2) 0`,
     marginBottom: rem(120),
   },
 
