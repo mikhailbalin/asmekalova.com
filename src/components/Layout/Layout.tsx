@@ -11,7 +11,7 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   const { classes } = useStyles();
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.root}>
       <Header
         links={[
           { label: "Home", link: "/" },
@@ -20,7 +20,7 @@ export function Layout({ children }: LayoutProps) {
           { label: "Journal", link: "/" },
         ]}
       />
-      {children}
+      <main>{children}</main>
       <Footer
         data={[
           {
