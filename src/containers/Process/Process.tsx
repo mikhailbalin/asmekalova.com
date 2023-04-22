@@ -10,6 +10,7 @@ import {
   Grid,
   Col,
   rem,
+  Container,
 } from "@mantine/core";
 import {
   IconGitBranch,
@@ -74,7 +75,7 @@ export function Process() {
   ));
 
   return (
-    <div className={classes.wrapper}>
+    <Container className={classes.wrapper}>
       <Grid>
         <Col span={12} md={5}>
           <Title className={classes.title} order={2}>
@@ -171,6 +172,6 @@ export function Process() {
           </Timeline>
         </Col>
       </Grid>
-    </div>
+    </Container>
   );
 }

@@ -1,13 +1,8 @@
 import React from "react";
-import { createStyles } from "@mantine/core";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-
-export const useStyles = createStyles((theme) => ({
-  wrapper: {
-    backgroundColor: theme.other.colors.brand1,
-  },
-}));
+import { useStyles } from "./Layout.styles";
+import { Breakpoint } from "../Breakpoint";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -93,6 +88,7 @@ export function Layout({ children }: LayoutProps) {
           },
         ]}
       />
+      <Breakpoint />
     </div>
   );
 }

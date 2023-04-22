@@ -62,16 +62,22 @@ export const HeaderContent = React.memo(({ links }: HeaderContentProps) => {
         lockScroll={false}
         withCloseButton={false}
         classNames={{
+          root: classes.drawerRoot,
           body: classes.drawerBody,
+          content: classes.drawerContent,
+        }}
+        transitionProps={{
+          duration: 400,
         }}
       >
         {items}
       </Drawer>
 
-      <Container className={classes.container} fluid id="Container">
+      <Container className={classes.container}>
         <Group className={classes.group} position="apart">
           <Button>Book a Call</Button>
-          <Burger opened={opened} onClick={toggle} />
+          <Group className={classes.links}>{items}</Group>
+          <Burger opened={opened} onClick={toggle} className={classes.burger} />
         </Group>
       </Container>
     </>

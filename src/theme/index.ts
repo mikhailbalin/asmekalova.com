@@ -32,5 +32,22 @@ export const theme: MantineThemeOverride = {
       gray2: "#e1e1e1",
     },
   },
-  components: {},
+  components: {
+    Container: {
+      styles: ({ fn }, params, context) => ({
+        root: {
+          [fn.largerThan("sm")]: {
+            maxWidth: params.sizes.sm,
+          },
+        },
+      }),
+      defaultProps: {
+        size: "xs",
+        sizes: {
+          xs: "95vw",
+          sm: "85vw",
+        },
+      },
+    },
+  },
 };

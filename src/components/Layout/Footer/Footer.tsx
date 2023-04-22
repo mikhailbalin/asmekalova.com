@@ -157,6 +157,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
+
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
           © 2020 mantine.dev. All rights reserved.

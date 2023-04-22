@@ -8,6 +8,7 @@ import {
   Button,
   useMantineTheme,
   rem,
+  Container,
 } from "@mantine/core";
 import { useStyles } from "./Testimonials.styles";
 
@@ -93,14 +94,16 @@ export function Testimonials() {
   ));
 
   return (
-    <Carousel
-      slideSize="50%"
-      breakpoints={[{ maxWidth: "sm", slideSize: "100%", slideGap: rem(2) }]}
-      slideGap="xl"
-      align="start"
-      slidesToScroll={mobile ? 1 : 2}
-    >
-      {slides}
-    </Carousel>
+    <Container>
+      <Carousel
+        slideSize="50%"
+        breakpoints={[{ maxWidth: "sm", slideSize: "100%", slideGap: rem(2) }]}
+        slideGap="xl"
+        align="start"
+        slidesToScroll={mobile ? 1 : 2}
+      >
+        {slides}
+      </Carousel>
+    </Container>
   );
 }

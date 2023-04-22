@@ -10,16 +10,24 @@ export const useStyles = createStyles((theme) => ({
 
   group: {
     width: "100%",
+
+    [theme.fn.largerThan("sm")]: {
+      flexDirection: "row-reverse",
+    },
   },
 
   links: {
     display: "none",
+
     [theme.fn.largerThan("sm")]: {
-      display: "block",
+      display: "flex",
+      gap: "2vw",
     },
   },
 
   burger: {
+    marginLeft: "auto",
+
     [theme.fn.largerThan("sm")]: {
       display: "none",
     },
@@ -29,7 +37,21 @@ export const useStyles = createStyles((theme) => ({
     marginRight: rem(5),
   },
 
+  drawerRoot: {
+    [theme.fn.largerThan("sm")]: {
+      display: "none",
+    },
+  },
+
   drawerBody: {
     paddingTop: rem(60),
+    paddingBottom: rem(20),
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+
+  drawerContent: {
+    height: "auto",
   },
 }));

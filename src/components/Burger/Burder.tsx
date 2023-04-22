@@ -1,6 +1,5 @@
 import { DefaultProps, Selectors, UnstyledButton } from "@mantine/core";
 import useStyles, { BurgerStylesParams } from "./Burger.styles";
-import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
 
 type BurgerStylesNames = Selectors<typeof useStyles>;
@@ -37,9 +36,7 @@ export const Burger = ({
     >
       <div
         className={cx(classes.line)}
-        onAnimationIteration={() => {
-          setAnimating(false);
-        }}
+        onAnimationIteration={() => setAnimating(false)}
       />
       <div className={cx(classes.line)} />
     </UnstyledButton>

@@ -16,7 +16,7 @@ const placeholder =
 export function Services() {
   const { classes } = useStyles();
   return (
-    <Container size="lg" className={classes.wrapper}>
+    <Container className={classes.wrapper}>
       <Grid>
         <Col span={12} md={6}>
           <Image src={image.src} alt="Frequently Asked Questions" />
