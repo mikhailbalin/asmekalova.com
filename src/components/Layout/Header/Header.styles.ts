@@ -1,53 +1,11 @@
-import { HEADER_HEIGHT } from "@components/constants";
-import { createStyles, rem } from "@mantine/core";
+import { createStyles } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
-  container: {
-    height: HEADER_HEIGHT,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-
-  group: {
-    width: "100%",
-  },
-
-  links: {
-    display: "none",
-    [theme.fn.largerThan("sm")]: {
-      display: "block",
-    },
-  },
-
-  burger: {
-    [theme.fn.largerThan("sm")]: {
-      display: "none",
-    },
-  },
-
-  link: {
-    display: "block",
-    lineHeight: 1,
-    padding: `${rem(8)} ${rem(12)}`,
-    borderRadius: theme.radius.sm,
-    textDecoration: "none",
-    color:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
-
-    "&:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
-    },
-  },
-
-  linkLabel: {
-    marginRight: rem(5),
+  header: {
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 1001,
+    position: "fixed",
   },
 }));
