@@ -3,8 +3,8 @@ import { createStyles, rem } from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: rem(120),
-    paddingBottom: rem(120),
+    paddingTop: rem(100),
+    // paddingBottom: rem(120),
     backgroundSize: "cover",
     backgroundPosition: "center",
 

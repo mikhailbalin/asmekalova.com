@@ -16,6 +16,7 @@ import {
   IconMessage2,
   IconLock,
 } from "@tabler/icons-react";
+import { CapsLabel } from "@components/components";
 
 export const MOCKDATA = [
   {
@@ -73,16 +74,10 @@ export function Feature({ icon: Icon, title, description }: FeatureProps) {
 }
 
 interface FeaturesGridProps {
-  title: React.ReactNode;
-  description: React.ReactNode;
   data?: FeatureProps[];
 }
 
-export function Experience({
-  title,
-  description,
-  data = MOCKDATA,
-}: FeaturesGridProps) {
+export function Experience({ data = MOCKDATA }: FeaturesGridProps) {
   const { classes } = useStyles();
   const features = data.map((feature, index) => (
     <Feature {...feature} key={index} />
@@ -90,11 +85,13 @@ export function Experience({
 
   return (
     <Container>
-      <Title className={classes.title}>{title}</Title>
+      {/* <Title className={classes.title}>{title}</Title>
 
       <Text size="sm" className={classes.description}>
         {description}
-      </Text>
+      </Text> */}
+
+      <CapsLabel>Обо мне</CapsLabel>
 
       <SimpleGrid
         mt={60}

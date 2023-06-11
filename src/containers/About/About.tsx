@@ -10,8 +10,9 @@ import {
   ThemeIcon,
   rem,
 } from "@mantine/core";
-import { IconCheck } from "@tabler/icons-react";
+import { IconCheck, IconHeartFilled } from "@tabler/icons-react";
 import { useStyles } from "./About.styles";
+import { CapsLabel } from "@components/components";
 // import image from "./image.svg";
 
 export function About() {
@@ -20,16 +21,21 @@ export function About() {
     <Container>
       <div className={classes.inner}>
         <div className={classes.content}>
-          <Title className={classes.title}>
-            <span className={classes.highlight}>About</span> Me <br /> something
-          </Title>
-          <Text color="dimmed" mt="md">
-            Build fully functional accessible web applications faster than ever
-            – Mantine includes more than 120 customizable components and hooks
-            to cover you in any situation
+          <CapsLabel>Обо мне</CapsLabel>
+          <Text>
+            Привет! Меня зовут Анастасия Смекалова, я - дипломированный
+            психолог-консультант. В своей работе использую комплексный подход,
+            методы и техники из разных подходов в терапии: психоанализ,
+            когнитивно-поведенческая терапия, трансактный анализ и коучинг. Это
+            помогает работать с запросами на глубинном уровне, разматывать
+            клубок и искать причины внутренних проблем, выводить их на
+            осознанный уровень, прорабатывать на уровне чувств и сознания,
+            переписывать нерабочие сценарии мышления и поведения и интегрировать
+            это в настоящее, для более качественной и эффективной жизни{" "}
+            <IconHeartFilled size={rem(16)} className={classes.icon} />
           </Text>
 
-          <List
+          {/* <List
             mt={30}
             spacing="sm"
             size="sm"
@@ -51,9 +57,9 @@ export function About() {
               <b>No annoying focus ring</b> – focus ring will appear only when
               user navigates with keyboard
             </List.Item>
-          </List>
+          </List> */}
 
-          <Group mt={30}>
+          {/* <Group mt={30}>
             <Button radius="xl" size="md" className={classes.control}>
               Get started
             </Button>
@@ -65,7 +71,7 @@ export function About() {
             >
               Source code
             </Button>
-          </Group>
+          </Group> */}
         </div>
         {/* <Image src={image.src} className={classes.image} /> */}
       </div>
