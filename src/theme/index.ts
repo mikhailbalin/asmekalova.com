@@ -49,5 +49,17 @@ export const theme: MantineThemeOverride = {
         },
       },
     },
+    Title: {
+      styles: {
+        root: {
+          "&:is(h4)": {
+            fontSize: "24px",
+            lineHeight: "1.5em",
+            fontWeight: 400,
+            letterSpacing: ".02em",
+          },
+        },
+      },
+    },
   },
 };

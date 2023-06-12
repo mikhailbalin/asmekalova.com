@@ -1,72 +1,55 @@
 import React from "react";
 import { useStyles } from "./Experience.styles";
-import {
-  ThemeIcon,
-  Text,
-  Title,
-  Container,
-  SimpleGrid,
-  createStyles,
-  rem,
-} from "@mantine/core";
-import {
-  IconGauge,
-  IconCookie,
-  IconUser,
-  IconMessage2,
-  IconLock,
-} from "@tabler/icons-react";
+import { ThemeIcon, Text, Title, Container, SimpleGrid } from "@mantine/core";
 import { CapsLabel } from "@components/components";
 
-export const MOCKDATA = [
+export const EXPERIENCE_DATA = [
   {
-    icon: IconGauge,
-    title: "Extreme performance",
-    description:
-      "This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit",
+    date: "2009 - 2013",
+    title: "Бакалавр НИУ ВШЭ",
+    description: "150 часов личной терапии",
   },
   {
-    icon: IconUser,
-    title: "Privacy focused",
+    date: "август 2021 - декабрь 2022",
+    title: "Профессиональная переподготовка на базе высшего образования",
     description:
-      "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma",
+      "1610 часов, присвоена степени практикующий психолог и психолог консультант",
   },
   {
-    icon: IconCookie,
-    title: "No third parties",
-    description:
-      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
-  },
-  {
-    icon: IconLock,
-    title: "Secure by default",
-    description:
-      "Although it still can’t fly, its jumping power is outstanding, in Alola the mushrooms on Paras don’t grow up quite right",
-  },
-  {
-    icon: IconMessage2,
-    title: "24/7 Support",
-    description:
-      "Rapidash usually can be seen casually cantering in the fields and plains, Skitty is known to chase around after its own tail",
+    date: "март 2023 - октябрь 2023",
+    title: "Повышение квалификации",
+    description: "Работа с группами, более 100 часов практики",
   },
 ];
 
 interface FeatureProps {
-  icon: React.FC<any>;
+  date: string;
   title: React.ReactNode;
   description: React.ReactNode;
 }
 
-export function Feature({ icon: Icon, title, description }: FeatureProps) {
+export function Feature({ date, title, description }: FeatureProps) {
   return (
     <div>
-      <ThemeIcon variant="light" size={40} radius={40}>
+      {/* <ThemeIcon variant="light" size={40} radius={40}>
         <Icon size="1.1rem" stroke={1.5} />
-      </ThemeIcon>
-      <Text mt="sm" mb={7}>
-        {title}
+      </ThemeIcon> */}
+      <Text
+        mt="sm"
+        sx={{
+          marginBottom: 10,
+          fontSize: 14,
+          textTransform: "uppercase",
+          lineHeight: "1.3em",
+          letterSpacing: ".02em",
+        }}
+      >
+        {date}
       </Text>
-      <Text size="sm" color="dimmed" sx={{ lineHeight: 1.6 }}>
+      <Title order={4} mb={10}>
+        {title}
+      </Title>
+      <Text size="sm" sx={{ lineHeight: 1.6 }}>
         {description}
       </Text>
     </div>
@@ -77,7 +60,7 @@ interface FeaturesGridProps {
   data?: FeatureProps[];
 }
 
-export function Experience({ data = MOCKDATA }: FeaturesGridProps) {
+export function Experience({ data = EXPERIENCE_DATA }: FeaturesGridProps) {
   const { classes } = useStyles();
   const features = data.map((feature, index) => (
     <Feature {...feature} key={index} />
@@ -91,12 +74,12 @@ export function Experience({ data = MOCKDATA }: FeaturesGridProps) {
         {description}
       </Text> */}
 
-      <CapsLabel>Обо мне</CapsLabel>
+      <CapsLabel>Образование</CapsLabel>
 
       <SimpleGrid
-        mt={60}
+        // mt={60}
         cols={3}
-        spacing={50}
+        spacing={40}
         breakpoints={[
           { maxWidth: 980, cols: 2, spacing: "xl" },
           { maxWidth: 755, cols: 1, spacing: "xl" },
