@@ -18,7 +18,12 @@ import { CapsLabel } from "@components/components";
 export function About() {
   const { classes } = useStyles();
   return (
-    <Container>
+    <Container
+      sx={{
+        backgroundColor: "#e6ddd9",
+        paddingTop: rem(50),
+      }}
+    >
       <div className={classes.inner}>
         <div className={classes.content}>
           <CapsLabel>Обо мне</CapsLabel>

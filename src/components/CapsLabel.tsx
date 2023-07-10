@@ -6,7 +6,7 @@ const useStyles = createStyles((theme) => ({
     lineHeight: "1.3em",
     letterSpacing: ".02em",
     textTransform: "uppercase",
-    marginTop: rem(50),
+    // marginTop: rem(50),
     marginBottom: rem(20),
   },
 }));

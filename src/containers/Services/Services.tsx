@@ -19,14 +19,48 @@ export function Services() {
     <Container className={classes.wrapper}>
       <Grid>
         <Col span={12} md={6}>
-          <Image src={image.src} alt="Frequently Asked Questions" />
+          <Image src={image.src} alt="My Services" />
         </Col>
         <Col span={12} md={6}>
           <Title order={2} ta="left" className={classes.title}>
-            My Services
+            С какими запросами я работаю
           </Title>
 
-          <Accordion
+          <div className="abilities">
+            <div className="margin-l">
+              <div className="numbered-title">
+                <div className="label-caps special-margin">01</div>
+                <h3 className="no-margin">Project Management</h3>
+              </div>
+              <p>
+                Guiding a project from the beginning through the middle to the
+                end
+              </p>
+            </div>
+            <div className="margin-l">
+              <div className="numbered-title">
+                <div className="label-caps special-margin">02</div>
+                <h3 className="no-margin">Creative copywriting</h3>
+              </div>
+              <p>
+                A good piece of copy is very dependent on the message you are
+                trying to send.
+              </p>
+            </div>
+            <div>
+              <div className="numbered-title">
+                <div className="label-caps special-margin">03</div>
+                <h3 className="no-margin">Project Management</h3>
+              </div>
+              <p>
+                When you build a website, you have very powerful marketing
+                collateral that you can use to get more business than you ever
+                thought possible.
+              </p>
+            </div>
+          </div>
+
+          {/* <Accordion
             chevronPosition="right"
             defaultValue="reset-password"
             variant="separated"
@@ -65,7 +99,7 @@ export function Services() {
               </Accordion.Control>
               <Accordion.Panel>{placeholder}</Accordion.Panel>
             </Accordion.Item>
-          </Accordion>
+          </Accordion> */}
         </Col>
       </Grid>
     </Container>

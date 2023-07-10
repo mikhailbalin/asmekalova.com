@@ -36,6 +36,7 @@ export const theme: MantineThemeOverride = {
     Container: {
       styles: ({ fn }, params, context) => ({
         root: {
+          maxWidth: "none",
           [fn.largerThan("sm")]: {
             maxWidth: params.sizes.sm,
           },

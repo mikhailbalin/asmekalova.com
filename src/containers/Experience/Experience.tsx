@@ -1,6 +1,13 @@
 import React from "react";
 import { useStyles } from "./Experience.styles";
-import { ThemeIcon, Text, Title, Container, SimpleGrid } from "@mantine/core";
+import {
+  ThemeIcon,
+  Text,
+  Title,
+  Container,
+  SimpleGrid,
+  rem,
+} from "@mantine/core";
 import { CapsLabel } from "@components/components";
 
 export const EXPERIENCE_DATA = [
@@ -67,7 +74,13 @@ export function Experience({ data = EXPERIENCE_DATA }: FeaturesGridProps) {
   ));
 
   return (
-    <Container>
+    <Container
+      sx={{
+        backgroundColor: "#e6ddd9",
+        paddingTop: rem(50),
+        paddingBottom: rem(40),
+      }}
+    >
       {/* <Title className={classes.title}>{title}</Title>
 
       <Text size="sm" className={classes.description}>

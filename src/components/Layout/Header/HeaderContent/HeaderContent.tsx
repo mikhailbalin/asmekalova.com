@@ -1,4 +1,12 @@
-import { Menu, Center, Container, Group, rem, Drawer } from "@mantine/core";
+import {
+  Menu,
+  Center,
+  Container,
+  Group,
+  rem,
+  Drawer,
+  Image,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import React from "react";
@@ -6,6 +14,7 @@ import { Button } from "@components/components/Button";
 import { Burger } from "@components/components/Burger";
 import { useStyles } from "./HeaderContent.styles";
 import { HeaderLink } from "./HeaderLink";
+import image from "./scandi-254.svg";
 
 interface HeaderContentProps {
   links: {
@@ -75,7 +84,8 @@ export const HeaderContent = React.memo(({ links }: HeaderContentProps) => {
 
       <Container className={classes.container}>
         <Group className={classes.group} position="apart">
-          <Button>Book a Call</Button>
+          <Image src={image.src} width={30} height={30} alt="Icon" />
+          {/* <Button>Book a Call</Button> */}
           <Group className={classes.links}>{items}</Group>
           <Burger opened={opened} onClick={toggle} className={classes.burger} />
         </Group>
