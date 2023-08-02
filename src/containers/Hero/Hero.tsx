@@ -2,6 +2,7 @@ import { Title, Container, Text } from "@mantine/core";
 import { useStyles } from "./Hero.styles";
 import Image from "next/image";
 import image from "./3X5A5956-1.jpg";
+import { ArrowLink } from "@components/components";
 
 export function Hero() {
   const { classes } = useStyles();
@@ -11,7 +12,10 @@ export function Hero() {
       <Container>
         <div className={classes.label}>Психолог</div>
         <Title className={classes.title}>Анастасия Смекалова</Title>
-        <Text>Провожу индивидуальные и групповые онлайн-консультации.</Text>
+        <Text mb={14}>
+          Провожу индивидуальные и групповые онлайн-консультации.
+        </Text>
+        <ArrowLink href="#contacts">Связаться со мной</ArrowLink>
         <div className={classes.imageWrapper}>
           <Image
             src={image}
